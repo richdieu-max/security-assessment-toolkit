@@ -20,18 +20,7 @@ The working papers I use for a cloud security assessment, as one Excel workbook:
 
 ## How the pieces connect
 
-```mermaid
-flowchart TD
-    RM[Rating Matrix<br/>scales + severity bands] -->|bands drive formulas| RR
-    TM[Threat Model<br/>assets · boundaries · STRIDE] -->|unmitigated threats| RR[Risk Register<br/>Score = L × I · Severity]
-    CR[Control Register<br/>what was built, where, why] --> CM[Compliance Mapping<br/>CSF 2.0 · 800-53 · ISO 27001]
-    RR -->|Partial / Gap rows cite a risk| CM
-    EV[Config Evidence<br/>hashed run folders] -->|evidence IDs| CR
-    EV --> CM
-    LV[Logging Validation<br/>sources · retention · alert tests] --> CM
-    RR --> SUM[Summary<br/>live counts]
-    CM --> SUM
-```
+![Inputs (rating matrix, threat model, evidence, logging) feed the risk and control registers, which feed compliance mapping and the summary](docs/diagrams/security-assessment-toolkit-flow.svg)
 
 ## Rules the workbook enforces
 
