@@ -1,0 +1,2 @@
+Rule,Type,How to fire it safely,Fired (UTC),Tester (role),Received?
+Key Vault deleted (example),Activity log,Delete a throwaway vault in a sandbox,,,

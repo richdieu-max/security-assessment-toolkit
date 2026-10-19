@@ -1,0 +1,9 @@
+Boundary / asset,STRIDE,Threat,Control in place,Gap,Risk Register ref
+B1,S,Forged client or replayed session,"TLS 1.2+, short-lived tokens, WAF bot rules",None,-
+B1,T,Malicious request bodies,WAF OWASP managed rules in prevention mode,Custom rules not yet tuned,R-04
+B1,D,Request flood,WAF rate limit on sign-in path,No DDoS protection plan,R-06
+B3,I,Database read outside the app,Private endpoint; public access disabled,None,-
+B4,E,App identity used to write secrets,Secrets User role only,None,-
+B5,E,Standing admin rights misused,MFA and Conditional Access,"Two standing Owners, no just-in-time access",R-01
+B5,R,Admin change with no trace,Activity log exported to workspace,Archive not immutable,R-03
+A3,T,Backups deleted by a compromised admin,Soft delete,Vault immutability not enabled,R-02

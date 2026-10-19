@@ -1,0 +1,6 @@
+Rule,Type,How to fire it safely,Fired (UTC),Tester (role),Received?
+Key Vault deleted,Activity log,"Delete a throwaway vault in the sandbox, then purge it",2026-10-14 15:02,Platform lead,Yes
+Policy assignment deleted,Activity log,Delete and recreate a test assignment in the sandbox,2026-10-14 15:20,Platform lead,Yes
+NSG rule changed,Activity log,Add then remove a deny rule on a sandbox NSG,2026-10-14 15:31,Platform lead,Yes
+Break-glass account sign-in,Log query,"Planned sign-in with the emergency account, witnessed",,,
+Backup job failed,Backup alert,Not safely testable; confirm rule and action group only,n/a,,n/a

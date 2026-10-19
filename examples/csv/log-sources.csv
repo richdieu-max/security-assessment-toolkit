@@ -1,0 +1,6 @@
+Source,Categories,Destination,Collection method,Retention,Evidence
+Subscription activity log,"Administrative, Security, Policy, ServiceHealth",Log Analytics workspace,Diagnostic setting,365 d; archive 7 y,EV-08
+Key Vault,AuditEvent,Log Analytics workspace,Diagnostic setting,365 d,EV-04
+Database,SQLSecurityAuditEvents,Log Analytics workspace,Auditing to workspace,365 d,EV-03
+Application gateway / WAF,"Access, Firewall",Log Analytics workspace,Diagnostic setting,365 d,EV-02
+Entra ID,"SignInLogs, AuditLogs",Log Analytics workspace,Entra diagnostic setting,365 d,EV-01

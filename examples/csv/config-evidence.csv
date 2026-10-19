@@ -1,0 +1,9 @@
+ID,What it shows,Evidence file(s),Run folder,Status,Notes
+EV-01,Identity and role assignments,role-assignments.json,posture-20261012T1400Z,Captured,
+EV-02,NSG rules and effective rules per NIC,"nsg-rules.json, effective-rules.json",posture-20261012T1400Z,Captured,
+EV-03,Database network and authentication settings,sql-config.json,posture-20261012T1400Z,Captured,
+EV-04,Key Vault configuration and role assignments,keyvault.json,posture-20261012T1400Z,Captured,
+EV-05,Azure Policy compliance report,policy-states.csv,posture-20261012T1400Z,Captured,Guardrails 100% on in-scope resources
+EV-06,Defender plans and security contact,defender.json,posture-20261012T1400Z,Captured,
+EV-07,Backup vault settings and last restore test,"vault.json, restore-test.md",posture-20261012T1400Z,Captured,Restore test 2026-10-10
+EV-08,Diagnostic settings and retention,diagnostics.json,posture-20261012T1400Z,Captured,

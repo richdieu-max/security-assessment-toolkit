@@ -1,0 +1,2 @@
+ID,Area,Rule / control,Where it lives,Enforcement,Why it exists,NIST SP 800-53 R5,NIST CSF 2.0,ISO/IEC 27001:2022 Annex A,Status,Evidence
+POL-01,Policy,Allowed locations (example),Root management group,Deny,Keeps data in approved regions,CM-6,PR.PS-01,5.23,Built,EV-05

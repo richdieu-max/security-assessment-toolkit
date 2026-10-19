@@ -1,0 +1,12 @@
+ID,Area,Rule / control,Where it lives,Enforcement,Why it exists,NIST SP 800-53 R5,NIST CSF 2.0,ISO/IEC 27001:2022 Annex A,Status,Evidence
+GOV-01,Governance,Management group hierarchy (root > platform / workloads / sandbox),Tenant root,Structure,Set policy once; every subscription inherits it,"PL-8, CM-2",GV.PO-01,"5.23, 8.9",Built,EV-01
+POL-01,Policy,Allowed locations (two paired regions),Root management group,Deny,Keeps data in approved regions,"CM-6, SA-9(5)",PR.PS-01,5.23,Built,EV-05
+POL-02,Policy,No public IP on network interfaces,Root management group,Deny,Removes direct internet exposure of VMs,SC-7,PR.IR-01,8.20,Built,EV-05
+IAM-01,Identity,Security Reader for the security team group,Root management group,RBAC,Read-only visibility for monitoring,AC-6,PR.AA-05,"5.15, 8.2",Built,EV-01
+IAM-02,Identity,Just-in-time Owner through PIM,Subscription,PIM,No standing admin rights,"AC-6(5), AC-2(7)",PR.AA-05,8.2,Open (R-01),-
+NET-01,Network,Deny-by-default NSGs; app port from gateway subnet only,Workload VNet,NSG,Limits east-west movement,"SC-7, AC-4",PR.IR-01,"8.20, 8.22",Built,EV-02
+KV-01,Secrets,"Key Vault: RBAC, purge protection, private endpoint",Workload resource group,Config,Secrets reachable only from the app network,"SC-12, SC-28",PR.DS-01,8.24,Built,EV-04
+BAK-01,Backup,"Geo-redundant vault, cross-region restore, soft delete",Workload resource group,Config,Recover from region loss or deletion,"CP-9, CP-6",PR.DS-11,8.13,Built,EV-07
+BAK-02,Backup,Vault immutability,Workload resource group,Config,Backups cannot be deleted early,CP-9,PR.DS-11,8.13,Open (R-02),-
+LOG-01,Logging,"Activity log to workspace, 365-day retention",Subscription,Diagnostic setting,Control-plane history beyond 90 days,"AU-2, AU-11, AU-12",PR.PS-04,8.15,Built,EV-08
+DEF-01,Threat protection,Defender for Cloud plans and security contact,Subscription,Config,Threat alerts reach a person,"SI-4, IR-6",DE.CM-01,8.16,Built,EV-06

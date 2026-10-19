@@ -1,0 +1,6 @@
+ID,Asset,Where it lives,Why it matters,Evidence,
+A1,Patient appointment records,"Azure SQL Database, private endpoint only",Personal and health-adjacent data; the product,EV-03,
+A2,Application secrets,"Key Vault, RBAC, private endpoint",A leaked signing key forges sessions,EV-04,
+A3,Database backups,"Recovery Services vault, geo-redundant",Recovery after corruption or ransomware,EV-07,
+A4,Audit and platform logs,"Log Analytics workspace, archive storage",Evidence for every other control,EV-08,
+A5,Administrator identities,Entra ID with Conditional Access,Control of everything above,EV-01,

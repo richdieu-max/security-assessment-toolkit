@@ -1,0 +1,6 @@
+ID,Boundary,Entry points crossing it,Status,Evidence,
+B1,Internet to application gateway,HTTPS 443 through WAF (prevention mode),Built,EV-02,
+B2,Gateway to app service,Private integration; app accepts gateway traffic only,Built,EV-02,
+B3,App to database,Private endpoint; Entra-only authentication,Built,EV-03,
+B4,App identity to Key Vault,Managed identity with Secrets User role only,Built,EV-04,
+B5,Administrators to control plane,"Entra ID, phishing-resistant MFA, Conditional Access",Partial: two standing Owners,EV-01,

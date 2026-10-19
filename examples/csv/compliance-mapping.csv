@@ -1,0 +1,13 @@
+CSF 2.0 function,CSF category,SP 800-53 control(s),ISO/IEC 27001:2022 Annex A,How it is met,Status,Evidence / risk
+Govern,GV.RR roles and responsibilities,"PM-2, PL-2",5.2,Owners are roles; runbook and registers under version control,Met,Runbook
+Govern,GV.PO policy,"PL-1, CM-1",5.1,Azure Policy baseline is the enforced policy; exemptions recorded,Met,EV-05
+Identify,ID.AM asset management,CM-8,5.9,Resource inventory captured per evidence run,Met,EV-01
+Identify,ID.RA risk assessment,"RA-3, RA-5",8.8,This threat model and risk register; Defender recommendations,Met,Risk Register
+Protect,PR.AA identity and access,"AC-2, AC-6, IA-2","5.15, 5.18, 8.2, 8.5",Group RBAC and MFA; standing Owners remain,Partial,R-01
+Protect,PR.DS data security,"SC-8, SC-12, SC-28",8.24,"TLS 1.2+, encryption at rest, keys in Key Vault",Met,EV-04
+Protect,PR.DS-11 backups,"CP-9, CP-10",8.13,Geo-redundant backups; immutability not enabled,Partial,R-02
+Protect,PR.PS platform security,"CM-2, CM-6, SI-2","8.9, 8.19",Policy guardrails; automatic patching,Met,EV-05
+Protect,PR.IR infrastructure resilience,"SC-7, SC-5","8.20, 8.22",Segmented network; WAF; no DDoS plan (accepted),Partial,R-06
+Detect,DE.CM continuous monitoring,"SI-4, AU-6",8.16,"Defender plans, alerts; no flow logs yet",Partial,R-07
+Respond,RS.MA incident management,"IR-4, IR-6","5.24, 5.26",Alert routing exists; recipient to be handed over,Partial,R-05
+Recover,RC.RP recovery plan execution,CP-10,5.30,Restore tested once; schedule quarterly,Met,EV-07
