@@ -1,5 +1,9 @@
 # security-assessment-toolkit
 
+![CI](https://github.com/richdieu-max/security-assessment-toolkit/actions/workflows/ci.yml/badge.svg)
+![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB)
+![openpyxl](https://img.shields.io/badge/built%20with-openpyxl-2ea44f)
+
 The working papers I use for a cloud security assessment, as one Excel workbook: rating matrix, threat model, risk register, control register, compliance mapping, configuration evidence and logging validation. A blank template, a fully worked example for a fictional company, and the Python script that builds both.
 
 > The example organisation (Contoso Clinic), its system and every finding are invented. No client material is included in this repository.
@@ -39,6 +43,8 @@ examples/contoso-clinic-assessment.xlsx        fully worked fictional example
 examples/csv/                                  the example tables as CSV (diff-friendly)
 docs/method.md                                 how I run an assessment with these sheets
 tools/build_workbook.py                        builds both workbooks (openpyxl)
+tools/check_workbook.py                        asserts sheet order, scoring formulas and validation lists
+.github/workflows/ci.yml                       rebuilds both workbooks on every push and fails if the CSVs drift
 ```
 
 Colour convention in the workbook: blue text is input, black text is formula, yellow fill is waiting for input, blue italic is an example row to replace.
@@ -52,6 +58,8 @@ python tools/build_workbook.py --example  # examples/
 ```
 
 Open the file in Excel once (or recalculate in LibreOffice) to populate formula results.
+
+`python tools/check_workbook.py` confirms a built file still has the nine sheets in order, Score and Severity as formulas on every risk row, and the Override and Status drop-down lists. CI runs the build and this check on every push.
 
 ## License
 

@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install openpyxl
+        run: pip install openpyxl
+
+      - name: Build the template and the worked example
+        run: |
+          python tools/build_workbook.py
+          python tools/build_workbook.py --example
+
+      - name: Committed CSV tables must match what the script builds
+        run: git diff --exit-code --stat -- templates/csv examples/csv
+
+      - name: Workbooks open with the expected sheets, formulas and validation
+        run: python tools/check_workbook.py templates/security-assessment-template.xlsx examples/contoso-clinic-assessment.xlsx
