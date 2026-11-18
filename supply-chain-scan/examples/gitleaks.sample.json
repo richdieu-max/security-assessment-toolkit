@@ -1,0 +1,18 @@
+[
+  {
+    "Description": "FICTIONAL finding for CI",
+    "RuleID": "generic-api-key",
+    "File": ".github/workflows/release.yml",
+    "StartLine": 42,
+    "Commit": "0000000aaaaaaa",
+    "Secret": "REDACTED"
+  },
+  {
+    "Description": "FICTIONAL finding for CI",
+    "RuleID": "generic-api-key",
+    "File": "src/config/defaults.js",
+    "StartLine": 7,
+    "Commit": "0000000bbbbbbb",
+    "Secret": "REDACTED"
+  }
+]

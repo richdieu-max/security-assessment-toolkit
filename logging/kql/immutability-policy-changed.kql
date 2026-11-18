@@ -1,0 +1,14 @@
+// id: KQL-09
+// title: Immutability policy on the log archive changed, locked or deleted
+// severity: 1
+// table: AzureActivity
+// frequency: PT5M
+// window: PT10M
+// threshold: > 0
+// controls: AU-9; AU-11
+// attack: T1070
+// fire-test: Extend the retention of the unlocked policy on a sandbox container by one day, then set it back.
+AzureActivity
+| where OperationNameValue startswith "MICROSOFT.STORAGE/STORAGEACCOUNTS/BLOBSERVICES/CONTAINERS/IMMUTABILITYPOLICIES/"
+| where ActivityStatusValue =~ "Success"
+| project TimeGenerated, Caller, OperationNameValue, _ResourceId, CorrelationId

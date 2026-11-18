@@ -1,0 +1,14 @@
+// id: KQL-08
+// title: Policy assignment deleted
+// severity: 1
+// table: AzureActivity
+// frequency: PT5M
+// window: PT10M
+// threshold: > 0
+// controls: CM-2; CM-3; AU-6
+// attack: T1562
+// fire-test: Delete and recreate a test assignment in the sandbox management group.
+AzureActivity
+| where OperationNameValue =~ "MICROSOFT.AUTHORIZATION/POLICYASSIGNMENTS/DELETE"
+| where ActivityStatusValue =~ "Success"
+| project TimeGenerated, Caller, _ResourceId, CorrelationId

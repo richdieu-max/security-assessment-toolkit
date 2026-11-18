@@ -1,0 +1,17 @@
+// id: KQL-01
+// title: Role assigned at subscription or management group scope
+// severity: 1
+// table: AzureActivity
+// frequency: PT5M
+// window: PT10M
+// threshold: > 0
+// controls: AC-2(4); AC-6(9); AU-6
+// attack: T1098.003
+// fire-test: Assign Reader to an empty test group at a sandbox subscription, then remove it.
+// note: exclude the build pipeline identity once its object ID is known; never exclude people.
+AzureActivity
+| where OperationNameValue =~ "MICROSOFT.AUTHORIZATION/ROLEASSIGNMENTS/WRITE"
+| where ActivityStatusValue =~ "Success"
+| extend Scope = tostring(Properties_d.entity)
+| where Scope matches regex @"(?i)^/subscriptions/[^/]+/providers/Microsoft\.Authorization/roleAssignments/" or Scope has "managementGroups"
+| project TimeGenerated, Caller, CallerIpAddress, Scope, CorrelationId

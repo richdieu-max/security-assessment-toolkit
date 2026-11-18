@@ -1,0 +1,15 @@
+// id: KQL-03
+// title: Break-glass account signed in
+// severity: 0
+// table: SigninLogs
+// frequency: PT5M
+// window: PT5M
+// threshold: > 0
+// controls: AC-2(12); IR-4
+// attack: T1078.004
+// fire-test: The planned quarterly break-glass sign-in test, recorded in the change log. Do not sign in only to test this rule.
+// note: list the break-glass UPNs in a watchlist rather than in the query.
+let BreakGlass = dynamic(["breakglass-01@example.com", "breakglass-02@example.com"]);
+SigninLogs
+| where UserPrincipalName in~ (BreakGlass)
+| project TimeGenerated, UserPrincipalName, ResultType, IPAddress, AppDisplayName, Location

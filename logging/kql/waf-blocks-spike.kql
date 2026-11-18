@@ -1,0 +1,16 @@
+// id: KQL-06
+// title: Spike in WAF blocked requests from one client
+// severity: 3
+// table: AzureDiagnostics
+// frequency: PT15M
+// window: PT15M
+// threshold: > 0
+// controls: SI-4; SC-7
+// attack: T1190
+// fire-test: From an allowed test client, send a handful of requests with a harmless SQL-injection pattern in a query string to a test path.
+// note: tune the 50-per-window threshold to the normal traffic of the workload.
+AzureDiagnostics
+| where Category == "ApplicationGatewayFirewallLog"
+| where action_s == "Blocked"
+| summarize Blocked = count(), Rules = make_set(ruleId_s, 10), Uris = make_set(requestUri_s, 5) by clientIp_s, bin(TimeGenerated, 15m)
+| where Blocked > 50

@@ -1,0 +1,41 @@
+# workflow.example.yml  (copy into a product repository as .github/workflows/supply-chain-scan.yml)
+# Runs the supply-chain scan on every push to main and weekly, and keeps the
+# evidence folder as a build artifact. It is NOT active in this repository.
+name: Supply-chain scan
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: read   # Dependabot alerts
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0            # gitleaks reads history
+
+      - name: Install scanners (pin versions in a real pipeline)
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
+          curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
+          # gitleaks: download a pinned release from github.com/gitleaks/gitleaks/releases
+
+      - name: Scan
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEPENDABOT_REPO: ${{ github.repository }}
+        run: ./tools/supply-chain-scan/scan.sh . ./evidence/scan-${{ github.run_id }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: supply-chain-evidence-${{ github.run_id }}
+          path: evidence/
+          retention-days: 90

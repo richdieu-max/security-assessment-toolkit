@@ -1,0 +1,14 @@
+// id: KQL-07
+// title: VM backup job failed
+// severity: 2
+// table: AddonAzureBackupJobs
+// frequency: PT1H
+// window: PT1H
+// threshold: > 0
+// controls: CP-9; CP-10
+// attack: T1490
+// fire-test: Put a ReadOnly lock on a sandbox VM's restore-point resource group, run an on-demand backup (it fails), then remove the lock.
+AddonAzureBackupJobs
+| where JobOperation == "Backup"
+| where JobStatus == "Failed"
+| project TimeGenerated, BackupItemUniqueId, JobFailureCode, ResourceId

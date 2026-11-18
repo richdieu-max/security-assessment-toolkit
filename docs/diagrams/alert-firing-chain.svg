@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 560" width="1280" height="560" role="img" aria-label="An alert is validated only when a person received it">
+<title>An alert is validated only when a person received it</title>
+<defs></defs>
+<rect x="0" y="0" width="1280" height="560" rx="0" fill="#0D1117" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="0" width="1280" height="6" rx="0" fill="#1F6FEB" stroke="none" stroke-width="1.2"/>
+<text x="32" y="48" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600" fill="#E6EDF3" text-anchor="start">An alert is validated only when a person received it</text>
+<text x="32" y="74" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9198A1" text-anchor="start">A rule in the portal proves nothing. The chain is tested end to end, and every link is recorded in the Alert Test Log.</text>
+<rect x="50" y="160" width="170" height="90" rx="45" fill="#121D2F" stroke="#4493F8" stroke-width="3"/>
+<text x="135" y="200" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="700" fill="#4493F8" text-anchor="middle">KQL rule</text>
+<text x="135" y="222" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#9198A1" text-anchor="middle">header says how to fire it</text>
+<rect x="200" y="192" width="70" height="26" rx="13" fill="none" stroke="#9198A1" stroke-width="3"/>
+<rect x="250" y="160" width="170" height="90" rx="45" fill="#211D12" stroke="#D29922" stroke-width="3"/>
+<text x="335" y="200" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="700" fill="#D29922" text-anchor="middle">Fire safely</text>
+<text x="335" y="222" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#9198A1" text-anchor="middle">sandbox, change ticket</text>
+<rect x="400" y="192" width="70" height="26" rx="13" fill="none" stroke="#9198A1" stroke-width="3"/>
+<rect x="450" y="160" width="170" height="90" rx="45" fill="#0F2426" stroke="#39C5CF" stroke-width="3"/>
+<text x="535" y="200" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="700" fill="#39C5CF" text-anchor="middle">Log arrives</text>
+<text x="535" y="222" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#9198A1" text-anchor="middle">diagnostic setting works</text>
+<rect x="600" y="192" width="70" height="26" rx="13" fill="none" stroke="#9198A1" stroke-width="3"/>
+<rect x="650" y="160" width="170" height="90" rx="45" fill="#1E1A2E" stroke="#AB7DF8" stroke-width="3"/>
+<text x="735" y="200" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="700" fill="#AB7DF8" text-anchor="middle">Rule fires</text>
+<text x="735" y="222" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#9198A1" text-anchor="middle">query + threshold right</text>
+<rect x="800" y="192" width="70" height="26" rx="13" fill="none" stroke="#9198A1" stroke-width="3"/>
+<rect x="850" y="160" width="170" height="90" rx="45" fill="#161B22" stroke="#9198A1" stroke-width="3"/>
+<text x="935" y="200" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="700" fill="#9198A1" text-anchor="middle">Action group</text>
+<text x="935" y="222" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#9198A1" text-anchor="middle">routes to a mailbox</text>
+<rect x="1000" y="192" width="70" height="26" rx="13" fill="none" stroke="#9198A1" stroke-width="3"/>
+<rect x="1050" y="160" width="170" height="90" rx="45" fill="#12261A" stroke="#3FB950" stroke-width="3"/>
+<text x="1135" y="200" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="700" fill="#3FB950" text-anchor="middle">Person reads it</text>
+<text x="1135" y="222" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#9198A1" text-anchor="middle">Received? = Yes</text>
+<text x="640" y="300" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" fill="#9198A1" text-anchor="middle" font-style="italic">if any link is missing, the alert is not validated, however good the query is</text>
+<rect x="51.5" y="342" width="560" height="170" rx="6" fill="#000" stroke="none" stroke-width="1.2" opacity="0.25"/>
+<rect x="50" y="340" width="560" height="170" rx="6" fill="#1C2128" stroke="#3D444D" stroke-width="1"/>
+<rect x="50" y="340" width="4" height="170" rx="2" fill="#3FB950" stroke="none" stroke-width="1.2"/>
+<text x="64" y="362" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#3FB950" text-anchor="start">Alert Test Log (one row per rule)</text>
+<text x="64" y="382" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198A1" text-anchor="start">Rule, Type, How to fire it safely,</text>
+<text x="64" y="400" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198A1" text-anchor="start">Fired (UTC), Tester (role), Received?</text>
+<text x="64" y="418" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198A1" text-anchor="start"></text>
+<text x="64" y="436" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198A1" text-anchor="start">Generated from the KQL headers:</text>
+<text x="64" y="454" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198A1" text-anchor="start">python tools/check_kql.py --test-log ...</text>
+<rect x="651.5" y="342" width="580" height="170" rx="6" fill="#000" stroke="none" stroke-width="1.2" opacity="0.25"/>
+<rect x="650" y="340" width="580" height="170" rx="6" fill="#1C2128" stroke="#3D444D" stroke-width="1"/>
+<rect x="650" y="340" width="4" height="170" rx="2" fill="#F85149" stroke="none" stroke-width="1.2"/>
+<text x="664" y="362" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#F85149" text-anchor="start">Links that break most often</text>
+<text x="664" y="382" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198A1" text-anchor="start">Logs never exported (diagnostic setting missing)</text>
+<text x="664" y="400" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198A1" text-anchor="start">Entra audit logs not sent to the workspace</text>
+<text x="664" y="418" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198A1" text-anchor="start">Action group points at a person who left</text>
+<text x="664" y="436" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198A1" text-anchor="start">Mailbox exists but nobody reads it</text>
+<text x="664" y="454" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9198A1" text-anchor="start">Threshold tuned so high it never fires</text>
+</svg>

@@ -1,0 +1,20 @@
+[
+  {
+    "number": 1, "state": "open",
+    "dependency": { "package": { "ecosystem": "npm", "name": "example-http" }, "manifest_path": "package-lock.json" },
+    "security_advisory": { "ghsa_id": "GHSA-0000-0000-0001", "cve_id": "CVE-2099-0002", "severity": "high", "summary": "Example request smuggling" },
+    "security_vulnerability": { "first_patched_version": { "identifier": "2.1.4" } }
+  },
+  {
+    "number": 2, "state": "open",
+    "dependency": { "package": { "ecosystem": "github_actions", "name": "example/upload-action" }, "manifest_path": ".github/workflows/release.yml" },
+    "security_advisory": { "ghsa_id": "GHSA-0000-0000-0002", "cve_id": null, "severity": "moderate", "summary": "Example token exposure in logs" },
+    "security_vulnerability": { "first_patched_version": { "identifier": "3.0.1" } }
+  },
+  {
+    "number": 3, "state": "dismissed",
+    "dependency": { "package": { "ecosystem": "npm", "name": "example-dev-tool" }, "manifest_path": "package-lock.json" },
+    "security_advisory": { "ghsa_id": "GHSA-0000-0000-0003", "cve_id": "CVE-2099-0004", "severity": "low", "summary": "Dismissed: dev dependency only" },
+    "security_vulnerability": { "first_patched_version": null }
+  }
+]

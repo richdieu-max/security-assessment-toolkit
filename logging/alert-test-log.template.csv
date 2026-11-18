@@ -1,0 +1,11 @@
+Rule,Type,How to fire it safely,Fired (UTC),Tester (role),Received?
+KQL-01 Role assigned at subscription or management group scope,Log search,"Assign Reader to an empty test group at a sandbox subscription, then remove it.",,,
+KQL-02 New secret or certificate added to an app registration or service principal,Log search,"Add a short-lived secret to a test app registration in a non-production tenant or under a change ticket, then delete it.",,,
+KQL-03 Break-glass account signed in,Log search,"The planned quarterly break-glass sign-in test, recorded in the change log. Do not sign in only to test this rule.",,,
+KQL-04 Key Vault secret read by an identity that is not on the expected list,Log search,"Read a test secret in the sandbox vault with your own account (on a private path), which is not on the expected list.",,,
+"KQL-05 Network security group rule created, changed or deleted",Log search,Add and remove a deny rule with a high priority number on a sandbox NSG.,,,
+KQL-06 Spike in WAF blocked requests from one client,Log search,"From an allowed test client, send a handful of requests with a harmless SQL-injection pattern in a query string to a test path.",,,
+KQL-07 VM backup job failed,Log search,"Put a ReadOnly lock on a sandbox VM's restore-point resource group, run an on-demand backup (it fails), then remove the lock.",,,
+KQL-08 Policy assignment deleted,Log search,Delete and recreate a test assignment in the sandbox management group.,,,
+"KQL-09 Immutability policy on the log archive changed, locked or deleted",Log search,"Extend the retention of the unlocked policy on a sandbox container by one day, then set it back.",,,
+KQL-10 Diagnostic setting deleted (logging switched off),Log search,"Create a throwaway diagnostic setting on a sandbox resource, then delete it.",,,

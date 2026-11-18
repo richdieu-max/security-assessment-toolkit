@@ -1,0 +1,14 @@
+// id: KQL-10
+// title: Diagnostic setting deleted (logging switched off)
+// severity: 1
+// table: AzureActivity
+// frequency: PT5M
+// window: PT10M
+// threshold: > 0
+// controls: AU-2; AU-9; AU-12
+// attack: T1562.008
+// fire-test: Create a throwaway diagnostic setting on a sandbox resource, then delete it.
+AzureActivity
+| where OperationNameValue =~ "MICROSOFT.INSIGHTS/DIAGNOSTICSETTINGS/DELETE"
+| where ActivityStatusValue =~ "Success"
+| project TimeGenerated, Caller, _ResourceId, CorrelationId

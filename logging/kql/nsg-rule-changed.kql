@@ -1,0 +1,14 @@
+// id: KQL-05
+// title: Network security group rule created, changed or deleted
+// severity: 2
+// table: AzureActivity
+// frequency: PT5M
+// window: PT10M
+// threshold: > 0
+// controls: CM-3; SC-7; AU-6
+// attack: T1562.007
+// fire-test: Add and remove a deny rule with a high priority number on a sandbox NSG.
+AzureActivity
+| where OperationNameValue in~ ("MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/SECURITYRULES/WRITE", "MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/SECURITYRULES/DELETE")
+| where ActivityStatusValue =~ "Success"
+| project TimeGenerated, Caller, OperationNameValue, _ResourceId, CorrelationId

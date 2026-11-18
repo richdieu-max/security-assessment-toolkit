@@ -34,6 +34,17 @@ The working papers I use for a cloud security assessment, as one Excel workbook:
 - **Owners are roles, not people**, so the register stays valid when staff change.
 - **An alert is validated only when someone received it.** The firing log records how each rule was triggered safely, when, by which role, and whether the notification arrived.
 
+## Behind two of the sheets
+
+The workbook records results. Two folders hold the build and tooling that produce them (skeletons: they run and are tested, with the long tail marked TODO).
+
+| Folder | Feeds | What it is |
+|---|---|---|
+| [logging/](logging/) | Logging Validation | a 7-year immutable log archive (delivered unlocked, with the irreversible lock as a separate, guarded step), 10 KQL alert rules with how to fire each one safely, and an Alert Test Log generated from them |
+| [supply-chain-scan/](supply-chain-scan/) | Config Evidence, Risk Register | secrets, vulnerability, misconfiguration and SBOM scan, merged into one list where every finding is either fixed on the infrastructure side or routed to the application team |
+
+![Where an audit log lives](docs/diagrams/log-retention.svg)
+
 ## Files
 
 ```text
@@ -44,7 +55,11 @@ examples/csv/                                  the example tables as CSV (diff-f
 docs/method.md                                 how I run an assessment with these sheets
 tools/build_workbook.py                        builds both workbooks (openpyxl)
 tools/check_workbook.py                        asserts sheet order, scoring formulas and validation lists
-.github/workflows/ci.yml                       rebuilds both workbooks on every push and fails if the CSVs drift
+tools/check_kql.py                             checks the KQL alert library, writes its index and the Alert Test Log
+logging/                                       log archive (WORM) in Bicep, 10 KQL alert rules, firing-test template
+supply-chain-scan/                             gitleaks + trivy + syft scan and triage into infrastructure / application lanes
+docs/diagrams/                                 the diagrams used in these READMEs
+.github/workflows/ci.yml                       rebuilds both workbooks, checks KQL, tests the triage, compiles the Bicep
 ```
 
 Colour convention in the workbook: blue text is input, black text is formula, yellow fill is waiting for input, blue italic is an example row to replace.

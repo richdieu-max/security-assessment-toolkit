@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img" aria-label="Supply-chain scan: three scanners in, one triaged list out">
+<title>Supply-chain scan: three scanners in, one triaged list out</title>
+<defs><marker id="m3FB950" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#3FB950"/></marker><marker id="m4493F8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4493F8"/></marker><marker id="m9198A1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9198A1"/></marker><marker id="mD29922" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D29922"/></marker><marker id="mF85149" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#F85149"/></marker></defs>
+<rect x="0" y="0" width="1280" height="640" rx="0" fill="#0D1117" stroke="none" stroke-width="1.2"/>
+<rect x="0" y="0" width="1280" height="6" rx="0" fill="#1F6FEB" stroke="none" stroke-width="1.2"/>
+<text x="32" y="48" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600" fill="#E6EDF3" text-anchor="start">Supply-chain scan: three scanners in, one triaged list out</text>
+<text x="32" y="74" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9198A1" text-anchor="start">Duplicates merge, every finding lands in a lane, and the platform side fixes only what is its own to fix.</text>
+<rect x="41.5" y="122" width="290" height="74" rx="6" fill="#000" stroke="none" stroke-width="1.2" opacity="0.25"/>
+<rect x="40" y="120" width="290" height="74" rx="6" fill="#1C2128" stroke="#3D444D" stroke-width="1"/>
+<rect x="40" y="120" width="4" height="74" rx="2" fill="#F85149" stroke="none" stroke-width="1.2"/>
+<text x="54" y="142" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#F85149" text-anchor="start">gitleaks</text>
+<text x="54" y="162" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9198A1" text-anchor="start">secrets in files and history</text>
+<path d="M332,157 L470,300" fill="none" stroke="#F85149" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#mF85149)"/>
+<rect x="41.5" y="222" width="290" height="74" rx="6" fill="#000" stroke="none" stroke-width="1.2" opacity="0.25"/>
+<rect x="40" y="220" width="290" height="74" rx="6" fill="#1C2128" stroke="#3D444D" stroke-width="1"/>
+<rect x="40" y="220" width="4" height="74" rx="2" fill="#D29922" stroke="none" stroke-width="1.2"/>
+<text x="54" y="242" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#D29922" text-anchor="start">trivy</text>
+<text x="54" y="262" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9198A1" text-anchor="start">OS + app packages, Dockerfile/IaC, secrets</text>
+<path d="M332,257 L470,300" fill="none" stroke="#D29922" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#mD29922)"/>
+<rect x="41.5" y="322" width="290" height="74" rx="6" fill="#000" stroke="none" stroke-width="1.2" opacity="0.25"/>
+<rect x="40" y="320" width="290" height="74" rx="6" fill="#1C2128" stroke="#3D444D" stroke-width="1"/>
+<rect x="40" y="320" width="4" height="74" rx="2" fill="#4493F8" stroke="none" stroke-width="1.2"/>
+<text x="54" y="342" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#4493F8" text-anchor="start">Dependabot</text>
+<text x="54" y="362" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9198A1" text-anchor="start">open dependency alerts</text>
+<path d="M332,357 L470,300" fill="none" stroke="#4493F8" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#m4493F8)"/>
+<rect x="41.5" y="422" width="290" height="74" rx="6" fill="#000" stroke="none" stroke-width="1.2" opacity="0.25"/>
+<rect x="40" y="420" width="290" height="74" rx="6" fill="#1C2128" stroke="#3D444D" stroke-width="1"/>
+<rect x="40" y="420" width="4" height="74" rx="2" fill="#9198A1" stroke="none" stroke-width="1.2"/>
+<text x="54" y="442" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#9198A1" text-anchor="start">syft</text>
+<text x="54" y="462" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9198A1" text-anchor="start">SBOM (inventory, not findings)</text>
+<path d="M332,457 L470,520" fill="none" stroke="#9198A1" stroke-width="1.6" stroke-linejoin="round" stroke-dasharray="4 4" marker-end="url(#m9198A1)"/>
+<text x="400" y="540" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#9198A1" text-anchor="middle" font-style="italic">kept as evidence</text>
+<polygon points="470,170 690,170 640,330 520,330" fill="#1E1A2E" stroke="#AB7DF8" stroke-width="2"/>
+<text x="580" y="210" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#AB7DF8" text-anchor="middle">triage.py</text>
+<text x="580" y="236" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#E6EDF3" text-anchor="middle">merge same CVE + package</text>
+<text x="580" y="254" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#E6EDF3" text-anchor="middle">keep the higher severity</text>
+<text x="580" y="272" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#E6EDF3" text-anchor="middle">drop dismissed / passed</text>
+<text x="580" y="290" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#E6EDF3" text-anchor="middle">never write secret values</text>
+<rect x="540" y="330" width="80" height="40" rx="4" fill="#1E1A2E" stroke="#AB7DF8" stroke-width="1.2"/>
+<path d="M622,342 L705,342 L705,225 L762,225" fill="none" stroke="#3FB950" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#m3FB950)"/>
+<path d="M622,358 L705,358 L705,455 L762,455" fill="none" stroke="#D29922" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#mD29922)"/>
+<rect x="650.92" y="277" width="108.16000000000001" height="20" rx="10" fill="#12261A" stroke="#3FB950" stroke-width="1"/>
+<text x="705.0" y="291.5" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#3FB950" text-anchor="middle">Infrastructure</text>
+<rect x="660.58" y="399" width="88.84" height="20" rx="10" fill="#211D12" stroke="#D29922" stroke-width="1"/>
+<text x="705.0" y="413.5" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#D29922" text-anchor="middle">Application</text>
+<rect x="771.5" y="142" width="460" height="170" rx="6" fill="#000" stroke="none" stroke-width="1.2" opacity="0.25"/>
+<rect x="770" y="140" width="460" height="170" rx="6" fill="#1C2128" stroke="#3D444D" stroke-width="1"/>
+<rect x="770" y="140" width="4" height="170" rx="2" fill="#3FB950" stroke="none" stroke-width="1.2"/>
+<text x="784" y="162" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#3FB950" text-anchor="start">Infrastructure lane: fix it (Platform lead)</text>
+<text x="784" y="182" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9198A1" text-anchor="start">base image and OS packages</text>
+<text x="784" y="200" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9198A1" text-anchor="start">Dockerfile / IaC misconfiguration</text>
+<text x="784" y="218" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9198A1" text-anchor="start">CI workflow actions</text>
+<text x="784" y="236" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9198A1" text-anchor="start">secrets in infra files: rotate, then purge history</text>
+<text x="784" y="254" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9198A1" text-anchor="start">Status: Open</text>
+<rect x="771.5" y="372" width="460" height="170" rx="6" fill="#000" stroke="none" stroke-width="1.2" opacity="0.25"/>
+<rect x="770" y="370" width="460" height="170" rx="6" fill="#1C2128" stroke="#3D444D" stroke-width="1"/>
+<rect x="770" y="370" width="4" height="170" rx="2" fill="#D29922" stroke="none" stroke-width="1.2"/>
+<text x="784" y="392" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#D29922" text-anchor="start">Application lane: route it (Application team)</text>
+<text x="784" y="412" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9198A1" text-anchor="start">application dependencies</text>
+<text x="784" y="430" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9198A1" text-anchor="start">secrets in application code</text>
+<text x="784" y="448" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9198A1" text-anchor="start">written down with the evidence and handed over,</text>
+<text x="784" y="466" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9198A1" text-anchor="start">not fixed quietly by the infrastructure side</text>
+<text x="784" y="484" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9198A1" text-anchor="start">Status: Routed</text>
+<rect x="852.54" y="567" width="294.92" height="20" rx="10" fill="#0F2426" stroke="#39C5CF" stroke-width="1"/>
+<text x="1000.0" y="581.5" font-family="'Segoe UI', 'Segoe UI Web', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#39C5CF" text-anchor="middle">findings.csv + summary.md + MANIFEST.sha256</text>
+</svg>

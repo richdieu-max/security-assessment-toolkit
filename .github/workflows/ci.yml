@@ -31,3 +31,22 @@ jobs:
 
       - name: Workbooks open with the expected sheets, formulas and validation
         run: python tools/check_workbook.py templates/security-assessment-template.xlsx examples/contoso-clinic-assessment.xlsx
+
+      - name: KQL alert library (headers, structure, index is current)
+        run: |
+          python tools/check_kql.py --index logging/kql/INDEX.md --test-log logging/alert-test-log.template.csv
+          git diff --exit-code -- logging/kql/INDEX.md logging/alert-test-log.template.csv
+
+      - name: Supply-chain triage (unit tests, lint, scan with no scanners installed)
+        run: |
+          python -m unittest discover -s supply-chain-scan/tests -v
+          shellcheck supply-chain-scan/scan.sh
+          ./supply-chain-scan/scan.sh ./supply-chain-scan/examples ./out-scan
+          grep -q 'trivy: skipped' ./out-scan/tools.txt
+          (cd ./out-scan && sha256sum -c MANIFEST.sha256)
+
+      - name: Log archive (compile Bicep, parse the lock script)
+        run: |
+          az bicep install
+          for f in logging/log-archive/*.bicep; do az bicep build --file "$f" --stdout > /dev/null; done
+          pwsh -NoProfile -Command '$t=$null;$e=$null;[System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path ./logging/log-archive/Lock-ArchiveImmutability.skeleton.ps1),[ref]$t,[ref]$e)|Out-Null; if($e){$e|Format-List; exit 1}'
